@@ -1,0 +1,15 @@
+#!/bin/bash
+
+while true; do
+  # Get current workspace
+  curr_wsp=$(hyprctl activeworkspace -j | jq -r '.id')
+
+  # Get list of workspace IDs with windows
+  active_ws=$(hyprctl workspaces -j | jq -c 'map(select(.windows > 0) | { (.id | tostring): (.id | tostring) }) | add')
+
+  # Export to eww
+  eww update curr_wsp="$curr_wsp"
+  eww update active_ws="$active_ws"
+
+  sleep 0.01
+done

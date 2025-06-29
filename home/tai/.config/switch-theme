@@ -1,0 +1,24 @@
+#!/bin/bash
+
+var="$1"
+
+if [ $var == "dark" ]; then 
+    cp -r $HOME/.config/dark/* $HOME/.config/
+    swww img $HOME/wallpapers/cat1.jpg --transition-type outer --transition-fps 240
+fi
+if [ $var == "light" ]; then 
+    cp -r $HOME/.config/light/* $HOME/.config/
+    swww img $HOME/wallpapers/cat2.jpg --transition-type center --transition-fps 240
+fi
+if [ $var == "onedark" ]; then
+    cp -r $HOME/.config/onedark/* $HOME/.config/
+    swww img $HOME/wallpapers/onedark.jpg --transition-type center --transition-fps 240
+fi
+if [  $var == "oxocarbon" ]; then
+    cp -r $HOME/.config/oxocarbon/* $HOME/.config/
+    swww img $HOME/wallpapers/oxocarbon.jpg --transition-type center --transition-fps 240
+fi
+if [  $var == "gruber" ]; then
+    cp -r $HOME/.config/gruber/* $HOME/.config/
+    swww img $HOME/wallpapers/oxocarbon.jpg --transition-type center --transition-fps 240
+fi

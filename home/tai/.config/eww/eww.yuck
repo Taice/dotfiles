@@ -1,0 +1,140 @@
+(defwidget bar []
+ (centerbox :orientation "v"
+   (box :class "segment-top"
+        :valign "start"
+     (top))
+   (box :valign "center"
+        :class "middle"
+     (middle))
+   (box :valign "end"
+        :class "segment-bottom"
+     (bottom))))
+
+; ICONS
+(defwidget volicon []
+ (label :text "󰕾" :class "volicon"))
+(defwidget powicon []
+ (label :text "󰤆" :class "powicon"))
+(defwidget resticon []
+ (label :text "󰜉" :class "resticon"))
+(defwidget logicon []
+ (label :text "󰍃" :class "logicon"))
+(defwidget themeicon []
+ (label :text "" :class "themeicon"))
+ 
+; MAIN LAYOUT
+(defwidget top []
+  (box :class "container" (workspaces)))
+(defwidget middle [] 
+  (box :class "container" (time))) 
+(defwidget bottom []
+  (box :class "container" :orientation "v" :spacing 3 :space-evenly false (volume_scroller)(powerthings)))
+
+; TIME
+(defwidget time1 [] (label :text "${time == true ? hour : day}"))
+(defwidget time2 [] (label :text "${time == true ? min : month}"))
+(defwidget time3 [] (label :text "${time == true ? sec : year}"))
+(defwidget time []
+  (button
+     :onclick "eww update time=${!time}"
+     :tooltip "${time == true ? '${day}.${month}.${year}' : ""}"
+     (box
+       :class "widget"
+       :orientation "v"
+       (time1) (time2) (time3))))
+
+; VOLUME
+(defwidget volume_scroller []
+ (eventbox 
+       :onhover "eww update vol_reveal=true"
+       :onhoverlost "eww update vol_reveal=false"
+       (box :class "${vol_reveal ? "vol_slider" : "widget"}"
+         :space-evenly false
+         :spacing 0
+         :orientation "v"
+         (revealer 
+             :class "empty"
+             :transition "slideup"
+             :reveal vol_reveal
+             :duration "350ms"
+             (scale   :class "volbar"     
+                      :value curr_vol 
+                      :orientation "v"      
+                      :flipped true 
+                      :max 153
+                      :min 0 
+                      :onchange "amixer -D pulse sset Master {}%"))
+         (volicon))))
+                                   
+; WORKSPACES
+(defwidget workspaces []
+ (box :class "workspaces widget"
+    :orientation "v"
+    (for wsp in workspaces
+        (wspbutton :wsp wsp))))
+(defwidget wspbutton [wsp]
+ (button :class "${ wsp == curr_wsp ? "wsp_selected" : "wsp_button"}" :onclick "hyprctl dispatch workspace ${wsp}" "${wsp == curr_wsp ? "" : ""}"))
+
+; POWERTHINGS
+(defwidget powerthings []
+ (eventbox 
+       :onhover "eww update power_reveal=true"
+       :onhoverlost "eww update power_reveal=false"
+       (box :class "powerthings"
+         :space-evenly false
+         :spacing 0
+         :orientation "v"
+         (revealer 
+             :class "empty"
+             :transition "slideup"
+             :reveal power_reveal
+             :duration "500ms"
+             (box :class "powerthings" :orientation "v" :spacing 3 (logout)(restart)))
+         (poweroff))))
+
+(defwidget poweroff [] 
+ (button :onclick "shutdown now" (powicon)))
+(defwidget restart [] 
+ (button :onclick "shutdown -r now" (resticon)))
+(defwidget logout [] 
+ (button :onclick "pkill -u tai" (logicon)))
+(defwidget theme []
+ (button :onclick "$HOME/.config/switch-theme ${dark == true ? "dark" : "light"} && eww update dark=${!dark}" (themeicon)))
+
+; VARS
+(defvar dark false)
+(defvar workspaces '[
+                     "1",
+                     "2",
+                     "3",
+                     "4",
+                     "5",
+                     "6",
+                     "7",
+                     "8",
+                     "9"]
+                    ')
+(defvar power_reveal false)
+(defvar vol_reveal false)
+(defvar time true)
+
+; POLLS
+(defpoll hour :interval "1s" "date +%H")
+(defpoll min  :interval "1s" "date +%M")
+(defpoll sec  :interval "1s" "date +%S")
+
+(defpoll day      :interval "10m" "date +%d")
+(defpoll month    :interval "1h"  "date +%m")
+(defpoll year    :interval "1h"  "date +%y")
+
+(defpoll curr_vol :interval "1m" `amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'`)
+(defpoll curr_wsp :interval "100ms" "hyprctl activeworkspace | grep '(' | gip")
+
+; WINDOW
+(defwindow bar
+  :monitor 0
+  :stacking "fg"
+  :geometry (geometry :x 0 :y 0 :width "41px" :height "100%" :anchor "center left")
+  :reserve (struts :distance "41px" :side "left")
+  :exclusive true
+  (bar))

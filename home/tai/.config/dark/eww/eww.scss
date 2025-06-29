@@ -1,0 +1,112 @@
+$bg-1: #11111b;
+$bg-2: #1e1e2e;
+$bg-3: #313244;
+
+$fg: #cdd6f4;
+
+$container-padding: 2px;
+
+$vol: #e591ac;
+
+$powicon: #a83434;
+$logicon: #98bb6c;
+$resticon: #ffa066;
+
+* {
+  all: unset;
+}
+
+.bar {
+  background: $bg-1;
+  color: $fg;
+  font-family: "Roboto";
+  font-size: 20px;
+}
+
+.widget {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: $bg-2;
+  border-radius: 15px;
+}
+
+.container {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.volicon {
+  padding-right: 6px;
+  padding-bottom: 1px;
+  color: $vol;
+}
+
+.empty {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  min-width: 20px;
+}
+
+scale trough {
+  background-color: $bg-3;
+  border-radius: 5px;
+  min-height: 80px;
+  min-width: 10px;
+}
+
+.volbar trough highlight {
+  background-color: $vol;
+  border-radius: 5px;
+  min-height: 7px;
+}
+
+.volbox {
+  padding-left: 2px;
+}
+
+.vol_slider {
+  padding-top: 15px;
+  padding-bottom: 7px;
+  background-color: $bg-2;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.workspaces {
+  padding-right: 8px;
+}
+
+.powicon {
+  padding-right: 4px;
+  color: $powicon;
+}
+
+.resticon {
+  padding-right: 2px;
+  font-size: 22px;
+  color: $resticon;
+}
+
+.logicon {
+  font-size: 20px;
+  color: $logicon;
+}
+
+.themeicon {
+  padding-right: 7px;
+}
+
+.powerthings {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.wsp_button {
+  border-radius: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
