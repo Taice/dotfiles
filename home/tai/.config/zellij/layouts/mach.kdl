@@ -1,0 +1,14 @@
+layout {
+    pane {
+        command "nvim"
+        args "src/App.zig"
+    }
+    
+}
+keybinds {
+    shared {
+        bind "Super 1" { Run "zig" "build"; }
+        bind "Super 2" { Run "zig" "build" "test"; }
+        bind "Super 3" { Run "zig" "build" "run"; }
+    }
+}

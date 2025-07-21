@@ -1,82 +1,47 @@
 return {
     {
-        "savq/melange-nvim",
-        priority = 1000,
-        lazy = false,
-    },
-    {
-        "ellisonleao/gruvbox.nvim",
-        priority = 1000,
-        lazy = false,
-        config = function()
-            require('gruvbox').setup()
-        end
-    },
-    {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        priority = 1000,
-        lazy = false,
-        config = function()
-            require('catppuccin').setup()
-        end
-    },
+        "propet/colorscheme-persist.nvim",
+        lazy = false,  -- Required: Load on startup to set the colorscheme
+        config = true, -- Required: call setup() function
+        dependencies = {
+            "nvim-telescope/telescope.nvim",
 
-    {
-        "shaunsingh/nord.nvim",
-        priority = 1000,
-        lazy = false,
-        config = function()
-            require('nord').set()
-        end
-    },
-    {
-        "rebelot/kanagawa.nvim",
-        priority = 100,
-        lazy = false,
-    },
-    {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {}
-    },
-    {
-        "blazkowolf/gruber-darker.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {}
-    },
-    {
-        "navarasu/onedark.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require('onedark').setup {
-                style = 'darker'
-            }
-        end
-    },
-    {
-        "Mofiqul/dracula.nvim",
-        lazy = false,
-        priority = 1000,
-    },
-    {
-        { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-        {
+            "Shatur/neovim-ayu",
+            "Th3Whit3Wolf/space-nvim",
+            "savq/melange-nvim",
+            "ellisonleao/gruvbox.nvim",
+            "catppuccin/nvim",
+            "shaunsingh/nord.nvim",
+            "rebelot/kanagawa.nvim",
+            "folke/tokyonight.nvim",
+            "blazkowolf/gruber-darker.nvim",
+            "navarasu/onedark.nvim",
+            "Mofiqul/dracula.nvim",
             "baliestri/aura-theme",
-            lazy = false,
-            priority = 1000,
-            config = function(plugin)
-                vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
-                vim.cmd([[colorscheme aura-dark]])
-            end
-        }
+            "nyoom-engineering/oxocarbon.nvim",
+            "sam4llis/nvim-tundra",
+            "EdenEast/nightfox.nvim",
+            "rose-pine/neovim",
+            "ntk148v/habamax.nvim",
+            "rktjmp/lush.nvim",
+            "habamax/vim-habamax",
+        },
+        -- Set a keymap to open the picker
+        keys = {
+            {
+                "<leader>sc", -- Or your preferred keymap
+                function()
+                    require("colorscheme-persist").picker()
+                end,
+                mode = "n",
+                desc = "Choose colorscheme",
+            },
+        },
+        -- Optional: Configure the plugin (see Configuration section below)
+        opts = {
+            -- Add custom options here, for example:
+            -- fallback = "space-nvim",
+            file_path = vim.fn.stdpath("config") .. "/.current_colorscheme.lua",
+        },
     },
-    {
-        "nyoom-engineering/oxocarbon.nvim",
-        lazy = false,
-        priority = 1000,
-    }
 }

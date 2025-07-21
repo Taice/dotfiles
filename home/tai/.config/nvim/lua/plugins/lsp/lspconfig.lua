@@ -10,6 +10,38 @@ return {
         -- import lspconfig plugin
         local lspconfig = require("lspconfig")
         local configs = require("lspconfig.configs")
+
+        lspconfig.zls.setup {
+            -- Server-specific settings. See `:help lspconfig-setup`
+
+            -- omit the following line if `zls` is in your PATH
+            cmd = { '/home/tai/.local/bin/zls' },
+            -- There are two ways to set config options:
+            --   - edit your `zls.json` that applies to any editor that uses ZLS
+            --   - set in-editor config options with the `settings` field below.
+            --
+            -- Further information on how to configure ZLS:
+            -- https://zigtools.org/zls/configure/
+            settings = {
+                zls = {
+                    -- Whether to enable build-on-save diagnostics
+                    --
+                    -- Further information about build-on save:
+                    -- https://zigtools.org/zls/guides/build-on-save/
+                    -- enable_build_on_save = true,
+
+                    -- Neovim already provides basic syntax highlighting
+                    semantic_tokens = "partial",
+
+                    -- omit the following line if `zig` is in your PATH
+                    zig_exe_path = '/home/tai/.local/bin/zig'
+                }
+            }
+        }
+
+        lspconfig.qmlls.setup {
+            cmd = { "qmlls", "-E" }
+        }
         -- import mason_lspconfig plugin
         local mason_lspconfig = require("mason-lspconfig")
 
@@ -71,62 +103,10 @@ return {
 
         -- Change the Diagnostic symbols in the sign column (gutter)
         -- (not in youtube nvim video)
-        local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+        local signs = { Error = "E ", Warn = "W ", Hint = "H ", Info = "I " }
         for type, icon in pairs(signs) do
             local hl = "DiagnosticSign" .. type
             vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
         end
-        mason_lspconfig.setup_handlers({
-            -- default handler for installed servers
-            function(server_name)
-                lspconfig[server_name].setup({
-                    capabilities = capabilities,
-                })
-            end,
-
-            ["lua_ls"] = function()
-                -- configure lua server (with special settings)
-                lspconfig["lua_ls"].setup({
-                    capabilities = capabilities,
-                    settings = {
-                        Lua = {
-                            -- make the language server recognize "vim" global
-                            diagnostics = {
-                                globals = { "vim" },
-                            },
-                            completion = {
-                                callSnippet = "Replace",
-                            },
-                        },
-                    },
-                })
-            end,
-
-            ["clangd"] = function()
-                lspconfig["clangd"].setup({
-                    capabilities = capabilities
-                })
-            end,
-
-            -- Add support for rust_analyzer
-            ["rust_analyzer"] = function()
-                lspconfig["rust_analyzer"].setup({
-                    capabilities = capabilities,
-                    settings = {
-                        ["rust-analyzer"] = {
-                            cargo = {
-                                allFeatures = true,
-                            },
-                            procMacro = {
-                                enable = true,
-                            },
-                            checkOnSave = {
-                                command = "clippy",
-                            },
-                        },
-                    },
-                })
-            end,
-        })
     end,
 }

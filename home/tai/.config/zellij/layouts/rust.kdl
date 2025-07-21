@@ -1,0 +1,16 @@
+layout {
+    pane stacked=true {
+        pane {
+            command "nvim"
+            args "src/main.rs"
+        }
+        pane
+    }
+}
+keybinds {
+    shared {
+        bind "Super 1" { Run "cargo" "build"; }
+        bind "Super 2" { Run "cargo" "test"; }
+        bind "Super 3" { Run "cargo" "run"; }
+    }
+}
