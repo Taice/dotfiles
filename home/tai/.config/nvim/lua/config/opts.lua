@@ -1,8 +1,0 @@
-vim.cmd("set clipboard+=unnamedplus")
-vim.cmd("set shell=/bin/zsh")
-vim.cmd("set shiftwidth=4")
-vim.cmd("set scrolloff=50")
-vim.cmd("set guicursor=")
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set colorcolumn=80")
