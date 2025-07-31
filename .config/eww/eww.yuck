@@ -1,6 +1,6 @@
 ; POLLS
 (defpoll battery :interval "15s" "cat /sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0A:00/power_supply/BAT0/capacity")
-(defpoll is-laptop :initial false :interval "30s" "path/to/is_laptop.sh")
+(defpoll is-laptop :initial false :interval "30s" "~/.config/eww/is_laptop.sh")
 
 (defpoll hour :interval "1s" "date +%H")
 (defpoll min  :interval "1s" "date +%M")
