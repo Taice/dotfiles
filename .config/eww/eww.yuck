@@ -1,0 +1,36 @@
+; POLLS
+(defpoll battery :interval "15s" "cat /sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0A:00/power_supply/BAT0/capacity")
+(defpoll is-laptop :initial false :interval "30s" "path/to/is_laptop.sh")
+
+(defpoll hour :interval "1s" "date +%H")
+(defpoll min  :interval "1s" "date +%M")
+(defpoll sec  :interval "1s" "date +%S")
+
+(defpoll curr_vol :interval "1m" `amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'`)
+
+(defwidget clock []
+	(label :halign "start" :text "${hour}:${min}"))
+
+(defwidget bat []
+	(label :visible is-laptop :halign "start" :text "battery: ${battery}"))
+
+(defwidget home_volume []
+		(scale :class "home-volbar"     
+			   :value curr_vol 
+			   :orientation "h"      
+			   :flipped false
+			   :max 153
+			   :min 0 
+			   :halign "start"
+			   :onchange "amixer -D pulse sset Master {}%"))
+
+(defwindow homescreen
+  :monitor 0
+  :stacking "bg"
+  :geometry (geometry :x "2%" :y "2%" :anchor "top left")
+  :exclusive false
+  (box :orientation "v" 
+  	   :class "homescreen"
+	   :space-evenly true
+	   :spacing 4
+	   (clock) (bat) (home_volume)))
