@@ -29,6 +29,7 @@ lspconfig.rust_analyzer.setup({})
 lspconfig.zls.setup({})
 lspconfig.clangd.setup({})
 lspconfig.somesass_ls.setup({})
+lspconfig.pyright.setup({})
 
 
 require 'telescope'.setup({
