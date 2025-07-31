@@ -16,7 +16,10 @@ vim.keymap.set("v", "<C-k>", "<Plug>GoVSMUp")
 local telescope = require('telescope.builtin')
 local home = vim.fn.expand('$HOME')
 vim.keymap.set('n', '<leader>fo', ':Oil<CR>')
-vim.keymap.set('n', '<leader>ff', telescope.find_files)
+vim.keymap.set('n', '<leader>ff', function()
+	telescope.find_files { cwd =
+		vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":h") }
+end)
 vim.keymap.set('n', '<leader>fc', function()
 	telescope.find_files { cwd = vim.fs.joinpath(home, ".config") }
 end)

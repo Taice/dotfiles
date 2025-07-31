@@ -12,7 +12,13 @@
 	(label :halign "start" :text "${hour}:${min}"))
 
 (defwidget bat []
-	(label :visible is-laptop :halign "start" :text "battery: ${battery}"))
+	(label :visible is-laptop :halign "start" 
+		:text 
+			"${battery > 85 ? ""
+			 : battery > 60 ? ""
+			 : battery > 40 ? ""
+			 : battery > 20 ? ""
+			 : ""}  ${battery}%"))
 
 (defwidget home_volume []
 		(scale :class "home-volbar"     
@@ -27,7 +33,7 @@
 (defwindow homescreen
   :monitor 0
   :stacking "bg"
-  :geometry (geometry :x "2%" :y "2%" :anchor "top left")
+  :geometry (geometry :x "8px" :y "8px" :anchor "top left")
   :exclusive false
   (box :orientation "v" 
   	   :class "homescreen"
