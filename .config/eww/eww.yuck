@@ -1,42 +1,94 @@
 ; POLLS
 (defpoll battery :interval "15s" "cat /sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0A:00/power_supply/BAT0/capacity")
-(defpoll is-laptop :initial false :interval "30s" "~/.config/eww/is_laptop.sh")
+(defpoll is-laptop :initial false :interval "30s" "scripts/is_laptop.sh")
 
 (defpoll hour :interval "1s" "date +%H")
 (defpoll min  :interval "1s" "date +%M")
 (defpoll sec  :interval "1s" "date +%S")
 
-(defpoll curr_vol :interval "1m" `amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'`)
+(defpoll curr-vol :interval "1m" `amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'`)
 
 (defwidget clock []
-	(label :halign "start" :text "${hour}:${min}"))
+    (label :halign "start" :text "${hour}:${min}"))
 
 (defwidget bat []
-	(label :visible is-laptop :halign "start" 
-		:text 
-			"${battery > 85 ? ""
-			 : battery > 60 ? ""
-			 : battery > 40 ? ""
-			 : battery > 20 ? ""
-			 : ""}  ${battery}%"))
+    (label :visible is-laptop :halign "start" 
+        :text 
+            "${battery > 85 ? ""
+             : battery > 60 ? ""
+             : battery > 40 ? ""
+             : battery > 20 ? ""
+             : ""}  ${battery}%"))
 
-(defwidget home_volume []
-		(scale :class "home-volbar"     
-			   :value curr_vol 
-			   :orientation "h"      
-			   :flipped false
-			   :max 153
-			   :min 0 
-			   :halign "start"
-			   :onchange "amixer -D pulse sset Master {}%"))
+(defwidget home-volume []
+        (scale :class "home-volbar"     
+               :value curr-vol 
+               :orientation "h"      
+               :flipped false
+               :max 153
+               :min 0 
+               :halign "start"
+               :onchange "amixer -D pulse sset Master {}%"))
 
 (defwindow homescreen
   :monitor 0
   :stacking "bg"
-  :geometry (geometry :x "8px" :y "8px" :anchor "top left")
+  :geometry (geometry :x "12px" :y "12px" :anchor "top left")
   :exclusive false
   (box :orientation "v" 
-  	   :class "homescreen"
-	   :space-evenly true
-	   :spacing 4
-	   (clock) (bat) (home_volume)))
+       :class "homescreen"
+       :space-evenly true
+       :spacing 4
+       (clock) (bat) (home-volume)))
+
+(defwindow bar
+    :monitor 0
+    :stacking "bg"
+    :geometry (geometry :x "0px" :y "0px" :width "100%" :anchor "bottom center")
+    :exclusive true
+    (box :orientation "h" 
+        :space-evenly true
+        :spacing 0
+        (left) (center) (right)))
+
+(defwidget left []
+    (box :halign "start" :class "bar-widget"
+        (workspaces)))
+(defwidget center []
+    (box :halign "center":class "bar-widget"
+        (bar-clock)))
+(defwidget right []
+    (box :halign "end":class "bar-widget"
+        (bar-volume)))
+
+(defwidget bar-clock []
+    (label :text "${hour}:${min}"))
+
+(defwidget bar-volume []
+        (scale :class "home-volbar"     
+               :value curr-vol 
+               :orientation "h"      
+               :flipped false
+               :max 153
+               :min 0 
+               :halign "start"
+               :onchange "amixer -D pulse sset Master {}%"))
+
+(deflisten workspace
+  "scripts/wsp.sh")
+
+(defwidget workspaces[]
+    (box	:class "workspace"	:orientation "h" :space-evenly "false" 	
+        (wspbutton :num 1)
+        (wspbutton :num 2)
+        (wspbutton :num 3)
+        (wspbutton :num 4)
+        (wspbutton :num 5)
+        (wspbutton :num 6)
+        (wspbutton :num 7)
+        (wspbutton :num 8)
+        (wspbutton :num 9)
+    ))
+
+(defwidget wspbutton [num]
+    (button :onclick "hyprctl dispatch workspace ${num}" :class "workspace-button" ""))
