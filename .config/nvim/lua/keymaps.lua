@@ -26,3 +26,5 @@ end)
 vim.keymap.set('n', '<leader>fh', function()
 	telescope.find_files { cwd = home }
 end)
+
+vim.keymap.set('n', '<M-m>', ':make run<CR>')
