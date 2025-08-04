@@ -28,3 +28,7 @@ vim.keymap.set('n', '<leader>fh', function()
 end)
 
 vim.keymap.set('n', '<M-m>', ':make run<CR>')
+
+vim.keymap.set('n', '<leader>d', function()
+  vim.diagnostic.open_float(nil, { focus = false })
+end, { desc = "Show diagnostics under cursor" })
