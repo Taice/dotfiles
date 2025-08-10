@@ -1,0 +1,163 @@
+$bg-1: #121212;
+$bg-1-5: #202020;
+$bg-2: #262626;
+$bg-3: #363636;
+
+$fg: #e0e7ea;
+$main: #B28474;
+
+$container-padding: 2px;
+
+$vol: $main;
+
+$powicon: #ee5396;
+$logicon: #ffe97b;
+$resticon: #3ddbd9;
+
+* {
+  all: unset;
+}
+
+.widget {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: $bg-2;
+  border-radius: 15px;
+}
+
+.container {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.volicon {
+  padding-right: 0px;
+  padding-bottom: 1px;
+  color: $vol;
+}
+
+.empty {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  min-width: 20px;
+}
+
+scale trough {
+  background-color: $bg-2;
+  border-radius: 80px;
+  min-height: 14px;
+  min-width: 90px;
+}
+
+trough highlight {
+  background-color: $vol;
+  border-radius: 80px;
+  min-height: 0px;
+}
+
+.volbar scale trough {
+  background-color: $bg-3;
+  border-radius: 5px;
+  min-height: 80px;
+  min-width: 10px;
+}
+
+.volbar trough highlight {
+  background-color: $vol;
+  border-radius: 5px;
+  min-height: 7px;
+}
+
+.volbox {
+  padding-left: 2px;
+}
+
+.vol_slider {
+  padding-top: 15px;
+  padding-bottom: 7px;
+  background-color: $bg-2;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.workspaces {
+  padding-right: 8px;
+}
+
+.powicon {
+  padding-right: 4px;
+  color: $powicon;
+}
+
+.resticon {
+  padding-right: 2px;
+  font-size: 22px;
+  color: $resticon;
+}
+
+.logicon {
+  font-size: 20px;
+  color: $logicon;
+}
+
+.themeicon {
+  padding-right: 7px;
+}
+
+.powerthings {
+  padding-top: 4px;
+  padding-bottom: 7px;
+}
+
+.wsp_button {
+  border-radius: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.wsp_selected {
+  color: $main;
+  border-radius: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.homescreen {
+  font-family: "Lato";
+  font-size: 20px;
+
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 2px;
+  border: 2px solid $main;
+  border-color: $main;
+  border-radius: 0px;
+  background-color: $bg-1;
+  color: $fg;
+}
+
+.bar-widget {
+  font-family: "Lato";
+  font-size: 20px;
+
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $main;
+  background-color: $bg-1;
+  color: $fg;
+}
+
+.workspace-button {
+  padding-left: 4px;
+  padding-right: 14px;
+}

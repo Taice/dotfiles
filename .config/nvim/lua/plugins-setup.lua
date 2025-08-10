@@ -4,8 +4,6 @@ require "mini.surround".setup()
 require "mini.pairs".setup()
 require "colorizer".setup()
 require "lazydev".setup()
-require "flash".setup()
-require "flash".toggle()
 require "Comment".setup()
 require("gomove").setup {
     -- whether or not to map default key bindings, (true/false)
@@ -31,6 +29,22 @@ lspconfig.clangd.setup({})
 lspconfig.somesass_ls.setup({})
 lspconfig.pyright.setup({})
 
+-- Treat .ino files as cpp (C++) files
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = "*.ino",
+  callback = function()
+    vim.bo.filetype = "arduino"
+  end,
+})
+local MY_FQBN = "esp32:esp32:esp32c3"
+lspconfig.arduino_language_server.setup {
+    cmd = {
+        "arduino-language-server",
+        "-fqbn",
+        MY_FQBN
+    }
+}
+
 
 require 'telescope'.setup({
     pickers = {
@@ -41,4 +55,3 @@ require 'telescope'.setup({
     },
 })
 require 'telescope'.load_extension('fzy_native')
-

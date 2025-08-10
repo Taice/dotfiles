@@ -34,9 +34,6 @@ vim.pack.add({
     -- plugins maker
     "https://github.com/folke/lazydev.nvim",
 
-    -- flash
-    "https://github.com/folke/flash.nvim",
-
     -- commenter
     "https://github.com/numToStr/Comment.nvim",
 
@@ -48,4 +45,7 @@ vim.pack.add({
 
     -- markdown viewer
     "https://github.com/iamcco/markdown-preview.nvim",
+
+    -- arduino
+    "https://github.com/glebzlat/arduino-nvim",
 })
