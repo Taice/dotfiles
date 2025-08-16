@@ -39,7 +39,7 @@
        :class "homescreen"
        :space-evenly true
        :spacing 4
-       (clock) (bat) (home-volume)))
+       (box :orientaiton "h" :space-evenly false (clock)(poweroff)) (bat) (home-volume)))
 
 (defwindow bar
     :monitor 0
@@ -92,3 +92,6 @@
 
 (defwidget wspbutton [num]
     (button :onclick "hyprctl dispatch workspace ${num}" :class "workspace-button" ""))
+
+(defwidget poweroff []
+    (button :onclick "shutdown now" :class "poweroff" "󰐥"))
