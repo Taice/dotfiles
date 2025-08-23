@@ -17,18 +17,24 @@ local telescope = require('telescope.builtin')
 local home = vim.fn.expand('$HOME')
 vim.keymap.set('n', '<leader>fo', ':Oil<CR>')
 vim.keymap.set('n', '<leader>ff', function()
-	telescope.find_files { cwd =
-		vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":h") }
+    telescope.find_files { cwd =
+        vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":h") }
 end)
 vim.keymap.set('n', '<leader>fc', function()
-	telescope.find_files { cwd = vim.fs.joinpath(home, ".config") }
+    telescope.find_files { cwd = vim.fs.joinpath(home, ".config") }
 end)
 vim.keymap.set('n', '<leader>fh', function()
-	telescope.find_files { cwd = home }
+    telescope.find_files { cwd = home }
 end)
 
 vim.keymap.set('n', '<M-m>', ':make run<CR>')
 
 vim.keymap.set('n', '<leader>d', function()
-  vim.diagnostic.open_float(nil, { focus = false })
+    vim.diagnostic.open_float(nil, { focus = false })
 end, { desc = "Show diagnostics under cursor" })
+
+-- emacs style moving keybinds in insert mode
+vim.keymap.set('i', '<C-b>', '<Left>', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-d>', '<Down>', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-u>', '<Up>', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-f>', '<Right>', { noremap = true, silent = true })

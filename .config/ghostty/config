@@ -19,8 +19,8 @@
 # ==========================
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
-font-family = Roboto mono
-font-size = 23
+font-family = Jetbrains mono
+font-size = 18
 #
 # # Spacing around the equals sign does not matter.
 # # All of these are identical:
@@ -41,4 +41,4 @@ font-size = 23
 # # which is explained in the docs for that config option.
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
-theme = dawg
+theme = boat

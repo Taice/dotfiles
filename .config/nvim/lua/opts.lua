@@ -12,6 +12,6 @@ vim.o.signcolumn = "yes"
 vim.o.winborder = "rounded"
 vim.o.updatetime = 250 -- default is 4000ms
 vim.o.scrolloff = 1000
-vim.cmd("colorscheme dawg")
+vim.cmd("colorscheme boat")
 vim.cmd(":hi normalfloat guibg=NONE")
 vim.g.vsnip_snippet_dir = vim.fn.stdpath("config") .. "/snippets"
