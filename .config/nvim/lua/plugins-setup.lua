@@ -29,6 +29,7 @@ lspconfig.clangd.setup({})
 lspconfig.somesass_ls.setup({})
 lspconfig.pyright.setup({})
 lspconfig.gopls.setup({})
+lspconfig.ols.setup({})
 
 -- Treat .ino files as cpp (C++) files
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
@@ -56,3 +57,5 @@ require 'telescope'.setup({
     },
 })
 require 'telescope'.load_extension('fzy_native')
+
+require 'treesitter-context'.setup()

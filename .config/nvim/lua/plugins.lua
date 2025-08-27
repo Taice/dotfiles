@@ -26,6 +26,7 @@ vim.pack.add({
 
     -- treesitter
     "https://github.com/nvim-treesitter/nvim-treesitter",
+    "https://github.com/nvim-treesitter/nvim-treesitter-context",
 
     -- mini
     "https://github.com/echasnovski/mini.surround",
@@ -42,6 +43,7 @@ vim.pack.add({
 
     -- color theme
     "https://github.com/Taice/boat.vim",
+    "https://github.com/bluz71/vim-moonfly-colors",
 
     -- markdown viewer
     "https://github.com/iamcco/markdown-preview.nvim",
