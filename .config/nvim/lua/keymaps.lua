@@ -12,6 +12,7 @@ vim.keymap.set("n", "<C-j>", "<Plug>GoNSMDown")
 vim.keymap.set("n", "<C-k>", "<Plug>GoNSMUp")
 vim.keymap.set("v", "<C-j>", "<Plug>GoVSMDown")
 vim.keymap.set("v", "<C-k>", "<Plug>GoVSMUp")
+vim.keymap.set("n", "<leader>m", ":make<CR>")
 
 local telescope = require('telescope.builtin')
 local home = vim.fn.expand('$HOME')
