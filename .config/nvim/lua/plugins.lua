@@ -44,6 +44,7 @@ vim.pack.add({
     -- color theme
     "https://github.com/Taice/boat.vim",
     "https://github.com/bluz71/vim-moonfly-colors",
+    "https://github.com/rebelot/kanagawa.nvim",
 
     -- markdown viewer
     "https://github.com/iamcco/markdown-preview.nvim",
