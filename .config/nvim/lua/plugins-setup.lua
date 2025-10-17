@@ -30,6 +30,7 @@ lspconfig.somesass_ls.setup({})
 lspconfig.pyright.setup({})
 lspconfig.gopls.setup({})
 lspconfig.ols.setup({})
+lspconfig.glsl_analyzer.setup({})
 
 -- Treat .ino files as cpp (C++) files
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
