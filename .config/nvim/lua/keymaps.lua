@@ -39,3 +39,11 @@ vim.keymap.set('i', '<C-b>', '<Left>', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-d>', '<Down>', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-u>', '<Up>', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-f>', '<Right>', { noremap = true, silent = true })
+
+vim.keymap.set("n",    "<C-e>",
+    function()
+        local result = vim.treesitter.get_captures_at_cursor(0)
+        print(vim.inspect(result))
+    end,
+    { noremap = true, silent = false }
+)

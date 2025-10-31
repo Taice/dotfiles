@@ -33,11 +33,11 @@ lspconfig.ols.setup({})
 lspconfig.glsl_analyzer.setup({})
 
 -- Treat .ino files as cpp (C++) files
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-  pattern = "*.ino",
-  callback = function()
-    vim.bo.filetype = "arduino"
-  end,
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+    pattern = "*.ino",
+    callback = function()
+        vim.bo.filetype = "arduino"
+    end,
 })
 local MY_FQBN = "esp32:esp32:esp32c3"
 lspconfig.arduino_language_server.setup {

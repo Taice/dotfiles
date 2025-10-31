@@ -19,7 +19,7 @@
 # ==========================
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
-font-family = Iosevka term extended
+font-family = Iosevka term
 font-size = 18
 #
 # # Spacing around the equals sign does not matter.
@@ -41,4 +41,4 @@ font-size = 18
 # # which is explained in the docs for that config option.
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
-theme = Jellybeans
+theme = Belafonte Day
