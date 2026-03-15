@@ -13,6 +13,7 @@ vim.pack.add({
     "https://github.com/norcalli/nvim-colorizer.lua",
     "https://github.com/EdenEast/nightfox.nvim",
     "https://github.com/flazz/vim-colorschemes",
+    "https://github.com/scottmckendry/cyberdream.nvim",
 
     -- autocompletion
     "https://github.com/neovim/nvim-lspconfig",
@@ -48,10 +49,14 @@ vim.pack.add({
     "https://github.com/WTFox/jellybeans.nvim",
     "https://github.com/catppuccin/nvim",
     "https://github.com/blazkowolf/gruber-darker.nvim",
+    "https://github.com/roerohan/orng.nvim",
+    "https://github.com/dasupradyumna/midnight.nvim",
 
     -- markdown viewer
     "https://github.com/iamcco/markdown-preview.nvim",
 
     -- arduino
     "https://github.com/glebzlat/arduino-nvim",
+
+    "https://github.com/folke/flash.nvim",
 })

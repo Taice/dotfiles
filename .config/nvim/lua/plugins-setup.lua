@@ -31,6 +31,9 @@ lspconfig.pyright.setup({})
 lspconfig.gopls.setup({})
 lspconfig.ols.setup({})
 lspconfig.glsl_analyzer.setup({})
+lspconfig.qmlls.setup({
+    cmd = { "qmlls", "-E" }
+})
 
 -- Treat .ino files as cpp (C++) files
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
@@ -60,3 +63,6 @@ require 'telescope'.setup({
 require 'telescope'.load_extension('fzy_native')
 
 require 'treesitter-context'.setup()
+
+require("flash").setup()
+require("flash").toggle()
