@@ -18,7 +18,7 @@ helpers.res_mirror(
     320, 16384
 )
 helpers.res_image(
-    "/home/tai/other/Pictures/overlay.png",
+    "/home/tai/.config/waywall/overlay.png",
     {
         dst = { x = 0, y = 315, w = 800, h = 450 },
     },
@@ -88,7 +88,7 @@ local config = {
         end,
 
         ["Shift-j"] = function()
-            waywall.exec("java -jar /home/tai/downloads/Ninjabrain-Bot-1.5.1.jar")
+            waywall.exec("java -jar /home/tai/Downloads/Ninjabrain-Bot-1.5.1.jar")
             waywall.show_floating(true)
         end,
         ["j"] = function() helpers.toggle_floating() end,
@@ -124,14 +124,22 @@ local config = {
             ["down"] = "leftctrl",
             -- ["leftalt"] = "equal",
             -- ["leftalt"] = "f3"
+            --
             ["leftalt"] = "backspace",
-            ["f"] = "space",
-            ["r"] = "f",
+            -- ["f"] = "space",
+            -- ["r"] = "f",
+            --
+            ["x"] = "b",
+            ["b"] = "x",
+            -- ["x"] = "space",
             -- ["v"] = "space",
             -- ["v"] = "space",
             -- ["a"] = "backspace",
             -- ["q"] = "home",
             -- ["space"] = "space",
+            ["leftalt"] = "space",
+            ["space"] = "backspace",
+            ["tab"] = "home",
         },
 
         sensitivity = 5.7,
@@ -140,11 +148,11 @@ local config = {
     theme = {
         background_png = "/home/tai/wallpapers/chinese.png",
         -- background = "#000000ff",
-        cursor_theme = "OsuCur",
-        -- cursor_icon = "duolingo_cur",
-        cursor_icon = "cursor_blue",
-        -- cursor_theme = "cross",
-        -- cursor_icon = "cross",
+        -- cursor_theme = "OsuCur",
+        -- -- cursor_icon = "duolingo_cur",
+        -- cursor_icon = "cursor_blue",
+        -- -- cursor_theme = "cross",
+        -- -- cursor_icon = "cross",
         ninb_opacity = 0.4,
     },
     shaders = {

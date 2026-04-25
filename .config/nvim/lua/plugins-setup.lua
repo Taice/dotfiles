@@ -15,11 +15,11 @@ require("gomove").setup {
     -- whether to not to move past end column when moving blocks horizontally, (true/false)
     move_past_end_col = false,
 }
-require("nvim-treesitter.configs").setup({
-    ensure_installed = { "rust", "lua", "c", "cpp", "zig" },
-    highlight = { enable = true },
-    indent = { enable = true },
-})
+-- require("nvim-treesitter.configs").setup({
+--     ensure_installed = { "rust", "lua", "c", "cpp", "zig" },
+--     highlight = { enable = true },
+--     indent = { enable = true },
+-- })
 
 local lspconfig = require('lspconfig')
 lspconfig.lua_ls.setup({})

@@ -1,0 +1,232 @@
+partial alphanumeric_keys
+xkb_symbols "curr" {
+    name[Group1] = "curr search crafting.";
+
+    key <RALT> {[  ISO_Level3_Shift  ], type[group1]="ONE_LEVEL" };
+    key <AE02> { [ U7D46, U7D42, U0000, U0000 ] };
+    key <AE03> { [ U5F29, U708E, U0000, U0000 ] };
+    key <AC02> { [ U93AC, U93AC, U0000, U0000 ] };
+    key <AC04> { [ U5F13, U5FA9, U0000, U0000 ] };
+    key <AB04> { [ U0000, U6750, U0000, U0000 ] };
+    key <AE05> { [ U6BDB, U6BDB, U0000, U0000 ] };
+    key <BKSL> { [ U5FA9, U5E8A, U0000, U0000 ] };
+    key <AD02> { [ U528D, U528D, U0000, U0000 ] };
+    key <AE01> { [ U70B8, U6797, U0000, U0000 ] };
+    key <AB01> { [ U6876, U91D1, U0000, U0000 ] };
+    key <AD01> { [ U77F3, U77F3, U0000, U0000 ] };
+    key <AE04> { [ U71E7, U7844, U0000, U0000 ] };
+    key <AB05> { [ U6F01, U80E1, U0000, U0000 ] };
+    key <AC11> { [ U9435, U9435, U0000, U0000 ] };
+    key <AD03> { [ U65A7, U65A7, U0000, U0000 ] };
+    key <AD04> { [ U68CD, U9320, U0000, U0000 ] };
+    key <AE10> { [ U0000, U7131, U0000, U0000 ] };
+    key <AB03> { [ U821F, U9EB5, U0000, U0000 ] };
+};
+partial alphanumeric_keys
+xkb_symbols "nynorsk" {
+    name[Group1] = "nynorsk search crafting.";
+
+    key <RALT> {[  ISO_Level3_Shift  ], type[group1]="ONE_LEVEL" };
+    key <AE02> { [ U0070, U0048, U0000, U0000 ] };
+    key <AE03> { [ U0069, U0052, U0000, U0000 ] };
+    key <AC02> { [ U0079, U0053, U0000, U0000 ] };
+    key <AC04> { [ U00E5, U00D8, U0000, U0000 ] };
+    key <AB04> { [ U0038, U0059, U0000, U0000 ] };
+    key <AC10> { [ U0032, U004D, U0000, U0000 ] };
+    key <BKSL> { [ U0064, U0045, U0000, U0000 ] };
+    key <AE01> { [ U0034, U002E, U0000, U0000 ] };
+    key <AD02> { [ U0067, U0042, U0000, U0000 ] };
+    key <AD01> { [ U006F, U004C, U0000, U0000 ] };
+    key <AB01> { [ U006C, U0050, U0000, U0000 ] };
+    key <AE04> { [ U002B, U0031, U0000, U0000 ] };
+    key <AB05> { [ U0068, U0055, U0000, U0000 ] };
+    key <AD03> { [ U0065, U0041, U0000, U0000 ] };
+    key <AD04> { [ U00E5, U00D8, U0000, U0000 ] };
+    key <AC11> { [ U0062, U004E, U0000, U0000 ] };
+    key <AB03> { [ U006A, U0056, U0000, U0000 ] };
+};
+partial alphanumeric_keys
+xkb_symbols "lux" {
+    name[Group1] = "lux search crafting.";
+
+    key <RALT> {[  ISO_Level3_Shift  ], type[group1]="ONE_LEVEL" };
+    key <AE02> { [ U0036, U0050, U0000, U0000 ] };
+    key <AE03> { [ U006E, U0045, U0000, U0000 ] };
+    key <AC02> { [ U006F, U0041, U0000, U0000 ] };
+    key <AB04> { [ U0077, U0048, U0000, U0000 ] };
+    key <AC04> { [ U006C, U00CB, U0000, U0000 ] };
+    key <AE05> { [ U0063, U0063, U0000, U0000 ] };
+    key <AC10> { [ U0073, U0073, U0000, U0000 ] };
+    key <BKSL> { [ U0062, U0057, U0000, U0000 ] };
+    key <AD02> { [ U0065, U0047, U0000, U0000 ] };
+    key <AE01> { [ U0061, U0034, U0000, U0000 ] };
+    key <AD01> { [ U0070, U0044, U0000, U0000 ] };
+    key <AB01> { [ U002B, U0042, U0000, U0000 ] };
+    key <AE04> { [ U0074, U002B, U0000, U0000 ] };
+    key <AB05> { [ U0034, U004F, U0000, U0000 ] };
+    key <AD03> { [ U006D, U0054, U0000, U0000 ] };
+    key <AC11> { [ U0075, U004E, U0000, U0000 ] };
+    key <AD04> { [ U006C, U00CB, U0000, U0000 ] };
+    key <AB03> { [ U0071, U0055, U0000, U0000 ] };
+};
+partial alphanumeric_keys
+xkb_symbols "thai" {
+    name[Group1] = "thai search crafting.";
+
+    key <RALT> {[  ISO_Level3_Shift  ], type[group1]="ONE_LEVEL" };
+    key <AE02> { [ U0E41, U0E2D, U0000, U0000 ] };
+    key <AE03> { [ U0E17, U0E17, U0000, U0000 ] };
+    key <AC02> { [ U0038, U0E07, U0000, U0000 ] };
+    key <AC04> { [ U0E2B, U0E2B, U0000, U0000 ] };
+    key <AB04> { [ U0E31, U0E31, U0000, U0000 ] };
+    key <AC10> { [ U0032, U002E, U0000, U0000 ] };
+    key <BKSL> { [ U0034, U0E22, U0000, U0000 ] };
+    key <AD02> { [ U0E08, U0E1A, U0000, U0000 ] };
+    key <AE01> { [ U0000, U0031, U0000, U0000 ] };
+    key <AD01> { [ U0E16, U0E32, U0000, U0000 ] };
+    key <AB01> { [ U0000, U0E19, U0000, U0000 ] };
+    key <AE04> { [ U0000, U0E02, U0000, U0000 ] };
+    key <AB05> { [ U0000, U0E18, U0000, U0000 ] };
+    key <AC11> { [ U002B, U0E48, U0000, U0000 ] };
+    key <AD03> { [ U0E01, U0E40, U0000, U0000 ] };
+    key <AD04> { [ U0E2B, U0E2B, U0000, U0000 ] };
+    key <AB03> { [ U0000, U0E02, U0000, U0000 ] };
+};
+partial alphanumeric_keys
+xkb_symbols "farsi" {
+    name[Group1] = "farsi search crafting.";
+
+    key <RALT> {[  ISO_Level3_Shift  ], type[group1]="ONE_LEVEL" };
+    key <AE02> { [ U0034, U0035, U0000, U0000 ] };
+    key <AE03> { [ U0038, U0034, U0000, U0000 ] };
+    key <AC02> { [ U0000, UFEA8, U0000, U0000 ] };
+    key <AC04> { [ U0000, UFE9E, U0000, U0000 ] };
+    key <AB04> { [ U0000, UFEE8, U0000, U0000 ] };
+    key <AC10> { [ U0000, U0038, U0000, U0000 ] };
+    key <BKSL> { [ UFEC0, UFEAE, U0000, U0000 ] };
+    key <AD02> { [ UFEE4, UFEE4, U0000, U0000 ] };
+    key <AE01> { [ UFEA9, UFEA9, U0000, U0000 ] };
+    key <AD01> { [ U0000, UFEB6, U0000, U0000 ] };
+    key <AB01> { [ UFE81, UFEC3, U0000, U0000 ] };
+    key <AE04> { [ U0032, UFECC, U0000, U0000 ] };
+    key <AB05> { [ U005F, U0020, U0000, U0000 ] };
+    key <AD03> { [ UFE8E, UFE8E, U0000, U0000 ] };
+    key <AD04> { [ UFEF2, UFEE2, U0000, U0000 ] };
+    key <AC11> { [ U0000, UFE96, U0000, U0000 ] };
+    key <AB03> { [ U06AF, U06AF, U0000, U0000 ] };
+};
+partial alphanumeric_keys
+xkb_symbols "nor" {
+    name[Group1] = "nor search crafting.";
+
+    key <RALT> {[  ISO_Level3_Shift  ], type[group1]="ONE_LEVEL" };
+    key <AE02> { [ U0061, U0064, U0000, U0000 ] };
+    key <AE03> { [ U0070, U0075, U0000, U0000 ] };
+    key <AC02> { [ U0073, U0073, U0000, U0000 ] };
+    key <AC04> { [ U0074, U0062, U0000, U0000 ] };
+    key <AB04> { [ U00E5, U0067, U0000, U0000 ] };
+    key <BKSL> { [ U0076, U0076, U0000, U0000 ] };
+    key <AD02> { [ U0075, U0068, U0000, U0000 ] };
+    key <AE01> { [ U006C, U0070, U0000, U0000 ] };
+    key <AD01> { [ U0062, U006C, U0000, U0000 ] };
+    key <AB01> { [ U002B, U0069, U0000, U0000 ] };
+    key <AE04> { [ U006D, U0065, U0000, U0000 ] };
+    key <AB05> { [ U0034, U0072, U0000, U0000 ] };
+    key <AD03> { [ U00F8, U0061, U0000, U0000 ] };
+    key <AC11> { [ U006E, U006E, U0000, U0000 ] };
+    key <AD04> { [ U0074, U0062, U0000, U0000 ] };
+    key <AB03> { [ U0069, U00F8, U0000, U0000 ] };
+};
+partial alphanumeric_keys
+xkb_symbols "icelandic" {
+    name[Group1] = "icelandic search crafting.";
+
+    key <RALT> {[  ISO_Level3_Shift  ], type[group1]="ONE_LEVEL" };
+    key <AE02> { [ U0070, U0048, U0000, U0000 ] };
+    key <AE03> { [ U0072, U0041, U0000, U0000 ] };
+    key <AC02> { [ U0073, U0055, U0000, U0000 ] };
+    key <AC04> { [ U00F6, U00D6, U0000, U0000 ] };
+    key <AB04> { [ U00E1, U004A, U0000, U0000 ] };
+    key <AC10> { [ U0075, U0075, U0000, U0000 ] };
+    key <BKSL> { [ U0076, U0052, U0000, U0000 ] };
+    key <AD02> { [ U0061, U0053, U0000, U0000 ] };
+    key <AE01> { [ U0068, U0042, U0000, U0000 ] };
+    key <AD01> { [ U0066, U004C, U0000, U0000 ] };
+    key <AB01> { [ U0062, U0046, U0000, U0000 ] };
+    key <AE04> { [ U006A, U00D3, U0000, U0000 ] };
+    key <AB05> { [ U006F, U0047, U0000, U0000 ] };
+    key <AD03> { [ U0074, U0056, U0000, U0000 ] };
+    key <AC11> { [ U006E, U004E, U0000, U0000 ] };
+    key <AD04> { [ U00F6, U00D6, U0000, U0000 ] };
+    key <AB03> { [ U006B, U0044, U0000, U0000 ] };
+};
+partial alphanumeric_keys
+xkb_symbols "cn" {
+    name[Group1] = "cn search crafting.";
+
+    key <RALT> {[  ISO_Level3_Shift  ], type[group1]="ONE_LEVEL" };
+    key <AE02> { [ U7D46, U7D42, U0000, U0000 ] };
+    key <AE03> { [ U5F29, U708E, U0000, U0000 ] };
+    key <AC02> { [ U93AC, U93AC, U0000, U0000 ] };
+    key <AC04> { [ U5F13, U5FA9, U0000, U0000 ] };
+    key <AB04> { [ U0000, U6750, U0000, U0000 ] };
+    key <AE05> { [ U6BDB, U6BDB, U0000, U0000 ] };
+    key <BKSL> { [ U5FA9, U5E8A, U0000, U0000 ] };
+    key <AD02> { [ U528D, U528D, U0000, U0000 ] };
+    key <AE01> { [ U70B8, U6797, U0000, U0000 ] };
+    key <AB01> { [ U6876, U91D1, U0000, U0000 ] };
+    key <AD01> { [ U77F3, U77F3, U0000, U0000 ] };
+    key <AE04> { [ U71E7, U7844, U0000, U0000 ] };
+    key <AB05> { [ U6F01, U80E1, U0000, U0000 ] };
+    key <AC11> { [ U9435, U9435, U0000, U0000 ] };
+    key <AD03> { [ U65A7, U65A7, U0000, U0000 ] };
+    key <AD04> { [ U68CD, U9320, U0000, U0000 ] };
+    key <AB03> { [ U821F, U9EB5, U0000, U0000 ] };
+};
+partial alphanumeric_keys
+xkb_symbols "ice" {
+    name[Group1] = "ice search crafting.";
+
+    key <RALT> {[  ISO_Level3_Shift  ], type[group1]="ONE_LEVEL" };
+    key <AE02> { [ U0070, U0048, U0000, U0000 ] };
+    key <AE03> { [ U0072, U0041, U0000, U0000 ] };
+    key <AC02> { [ U006E, U0055, U0000, U0000 ] };
+    key <AC04> { [ U0062, U00D6, U0000, U0000 ] };
+    key <AB04> { [ U0075, U004A, U0000, U0000 ] };
+    key <AE05> { [ U0074, U0074, U0000, U0000 ] };
+    key <AC10> { [ U0000, U004B, U0000, U0000 ] };
+    key <BKSL> { [ U00F6, U0052, U0000, U0000 ] };
+    key <AD02> { [ U0061, U0053, U0000, U0000 ] };
+    key <AE01> { [ U0068, U0042, U0000, U0000 ] };
+    key <AD01> { [ U0066, U004C, U0000, U0000 ] };
+    key <AB01> { [ U002B, U0046, U0000, U0000 ] };
+    key <AE04> { [ U006A, U00D3, U0000, U0000 ] };
+    key <AB05> { [ U0034, U0047, U0000, U0000 ] };
+    key <AD03> { [ U006F, U0056, U0000, U0000 ] };
+    key <AC11> { [ U00E1, U004E, U0000, U0000 ] };
+    key <AD04> { [ U0062, U00D6, U0000, U0000 ] };
+    key <AB03> { [ U0067, U0044, U0000, U0000 ] };
+};
+partial alphanumeric_keys
+xkb_symbols "yid" {
+    name[Group1] = "yid search crafting.";
+
+    key <RALT> {[  ISO_Level3_Shift  ], type[group1]="ONE_LEVEL" };
+    key <AE02> { [ U05E2, U05E9, U0000, U0000 ] };
+    key <AE03> { [ U05DF, U05D3, U0000, U0000 ] };
+    key <AC02> { [ U05E6, U05E6, U0000, U0000 ] };
+    key <AC04> { [ U0038, U05E0, U0000, U0000 ] };
+    key <AB04> { [ U05D5, U05D5, U0000, U0000 ] };
+    key <SPCE> { [ U0000, U0038, U0000, U0000 ] };
+    key <AC10> { [ U0000, U0034, U0000, U0000 ] };
+    key <BKSL> { [ U05DD, U0035, U0000, U0000 ] };
+    key <AD02> { [ U0020, U0020, U0000, U0000 ] };
+    key <AE01> { [ U05DE, U05DE, U0000, U0000 ] };
+    key <AB01> { [ U0000, U05E8, U0000, U0000 ] };
+    key <AD01> { [ U0000, U05E4, U0000, U0000 ] };
+    key <AE04> { [ U0034, U05BE, U0000, U0000 ] };
+    key <AB05> { [ U05D1, U05D1, U0000, U0000 ] };
+    key <AD03> { [ U05E7, U05E1, U0000, U0000 ] };
+    key <AC11> { [ U05DC, U05D0, U0000, U0000 ] };
+    key <AB03> { [ U05D9, U05D8, U0000, U0000 ] };
+};
