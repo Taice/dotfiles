@@ -1,0 +1,7 @@
+require("plugins")
+require("opts")
+require("plugins-setup")
+require("cmp-stuff")
+require("inline-diagnostics")
+require("c-header-fix")
+require("keymaps")

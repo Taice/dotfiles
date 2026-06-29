@@ -1,0 +1,23 @@
+partial alphanumeric_keys
+xkb_symbols "curr" {
+    name[Group1] = "curr search crafting.";
+
+    key <RALT> {[  ISO_Level3_Shift  ], type[group1]="ONE_LEVEL" };
+    key <AE02> { [ U7D46, U7D42, U0000, U0000 ] };
+    key <AE03> { [ U5F29, U708E, U0000, U0000 ] };
+    key <AC02> { [ U93AC, U93AC, U0000, U0000 ] };
+    key <AC04> { [ U5F13, U5FA9, U0000, U0000 ] };
+    key <AB04> { [ U0000, U6750, U0000, U0000 ] };
+    key <AE05> { [ U6BDB, U6BDB, U0000, U0000 ] };
+    key <BKSL> { [ U5FA9, U5E8A, U0000, U0000 ] };
+    key <AD02> { [ U528D, U528D, U0000, U0000 ] };
+    key <AE01> { [ U70B8, U6797, U0000, U0000 ] };
+    key <AB01> { [ U6876, U91D1, U0000, U0000 ] };
+    key <AD01> { [ U77F3, U77F3, U0000, U0000 ] };
+    key <AE04> { [ U71E7, U7844, U0000, U0000 ] };
+    key <AB05> { [ U6F01, U80E1, U0000, U0000 ] };
+    key <AC11> { [ U9435, U9435, U0000, U0000 ] };
+    key <AD03> { [ U65A7, U65A7, U0000, U0000 ] };
+    key <AD04> { [ U68CD, U9320, U0000, U0000 ] };
+    key <AB03> { [ U821F, U9EB5, U0000, U0000 ] };
+};

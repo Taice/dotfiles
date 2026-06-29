@@ -1,0 +1,62 @@
+vim.pack.add({
+    "https://github.com/stevearc/oil.nvim",
+
+    -- telescope
+    "https://github.com/nvim-lua/plenary.nvim",
+    "https://github.com/nvim-telescope/telescope.nvim",
+    "https://github.com/nvim-telescope/telescope-fzy-native.nvim",
+
+    -- lspconfig
+    "https://github.com/neovim/nvim-lspconfig",
+
+    -- colors
+    "https://github.com/norcalli/nvim-colorizer.lua",
+    "https://github.com/EdenEast/nightfox.nvim",
+    "https://github.com/flazz/vim-colorschemes",
+    "https://github.com/scottmckendry/cyberdream.nvim",
+
+    -- autocompletion
+    "https://github.com/neovim/nvim-lspconfig",
+    "https://github.com/hrsh7th/cmp-nvim-lsp",
+    "https://github.com/hrsh7th/cmp-buffer",
+    "https://github.com/hrsh7th/cmp-path",
+    "https://github.com/hrsh7th/cmp-cmdline",
+    "https://github.com/hrsh7th/nvim-cmp",
+    "https://github.com/hrsh7th/cmp-vsnip",
+    "https://github.com/hrsh7th/vim-vsnip",
+
+    -- treesitter
+    "https://github.com/nvim-treesitter/nvim-treesitter",
+    "https://github.com/nvim-treesitter/nvim-treesitter-context",
+
+    -- mini
+    "https://github.com/echasnovski/mini.surround",
+    "https://github.com/echasnovski/mini.pairs",
+
+    -- plugins maker
+    "https://github.com/folke/lazydev.nvim",
+
+    -- commenter
+    "https://github.com/numToStr/Comment.nvim",
+
+    -- gomove
+    "https://github.com/booperlv/nvim-gomove",
+
+    -- color theme
+    "https://github.com/Taice/boat.vim",
+    "https://github.com/bluz71/vim-moonfly-colors",
+    "https://github.com/rebelot/kanagawa.nvim",
+    "https://github.com/WTFox/jellybeans.nvim",
+    "https://github.com/catppuccin/nvim",
+    "https://github.com/blazkowolf/gruber-darker.nvim",
+    "https://github.com/roerohan/orng.nvim",
+    "https://github.com/dasupradyumna/midnight.nvim",
+
+    -- markdown viewer
+    "https://github.com/iamcco/markdown-preview.nvim",
+
+    -- arduino
+    "https://github.com/glebzlat/arduino-nvim",
+
+    "https://github.com/folke/flash.nvim",
+})

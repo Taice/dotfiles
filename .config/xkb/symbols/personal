@@ -1,0 +1,9 @@
+partial alphanumeric_keys
+xkb_symbols "colemak-sumniki" {
+    include "us(colemak_dh)"
+    name[Group1]= "English (US, euro on 5)";
+
+    key <AB05> { [ U007A, U005A, U017E, U017D ] };
+    key <AC03> { [ U0073, U0053, U0161, U0160 ] };
+    key <AB02> { [ U0063, U0043, U010D, U010C ] };
+};
